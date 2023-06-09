@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scope</title>
+  </head>
+  <body>
+    <script>
+      // Global Scope
+      let counter = 0;
+
+      function area_a(b) {
+        // local scope area_a
+        let name = "Ranjid Aliyantiko";
+        document.writeln(`<p>Hello : ${b}</p>`);
+        counter += 1;
+        document.writeln(`<p>Hello : ${counter}</p>`);
+      }
+
+      function area_b(b) {
+        //local scope b
+        document.writeln(`<p>Hello : ${b}</p>`);
+      }
+
+      area_a("JEED");
+      area_b("RAUN");
+
+      function first() {
+        let firstVariable = "First";
+        function firstNested() {
+          const firstNestedVariable = "ABC";
+          console.info(firstNestedVariable);
+        }
+
+        firstNested();
+      }
+
+      first();
+      area_a("ALI");
+      counter += 1;
+    </script>
+  </body>
+</html>

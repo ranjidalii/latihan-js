@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Parameter</title>
+  </head>
+  <body>
+    <script>
+      function sum(name, ...data) {
+        let total = 0;
+        for (const item of data) {
+          total += item;
+        }
+        document.writeln(`<p>Total : ${name} is ${total}</p>`);
+      }
+
+      sum("Manggo", 1, 2, 3, 6, 66, 71);
+      sum(1, 2, 3, 6, 66, 71);
+
+      const angka = [16, 88, 4, 2, 8, 5];
+      // Spread Syntax
+      sum("Melon", ...angka);
+
+      // Arguments Objek
+      function oldSum() {
+        let total = 0;
+        for (const argument of arguments) {
+          total += argument;
+        }
+        document.writeln(`<p>Total : ${name} is ${total}</p>`);
+      }
+
+      oldSum(2, 5, 7, 9);
+      oldSum(2, 2);
+    </script>
+  </body>
+</html>

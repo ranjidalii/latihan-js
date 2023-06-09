@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontersi String dan Number</title>
+  </head>
+  <body>
+    <script>
+      const value1 = parseInt("1");
+      const value2 = 1;
+      const sum = value1 + value2;
+
+      document.writeln(sum);
+      document.writeln(`<p>${parseInt("1.9")}</p>`);
+      document.writeln(`<p>${parseFloat("1.2")}</p>`);
+      document.writeln(`<p>${Number("1.4")}</p>`);
+
+      const a = 1;
+      const b = 2;
+
+      const c = a.toString() + b.toString();
+
+      document.writeln(`<p>${parseInt("1red")}</p>`);
+      document.writeln(`<p>${parseFloat("1.2red")}</p>`);
+      document.writeln(`<p>${Number("1rgt")}</p>`);
+      document.writeln(`<p>${Number("1.3red")}</p>`);
+
+      document.writeln(`<p>${c}</p>`);
+
+      const first = Number("Salah"); // * NaN
+      const totalNumber = first + 100;
+      document.writeln(`<p>${totalNumber}</p>`);
+
+      document.writeln(`<p>${isNaN(first)}</p>`);
+    </script>
+  </body>
+</html>

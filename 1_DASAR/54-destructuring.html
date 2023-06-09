@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring</title>
+  </head>
+  <body>
+    <script>
+      const //Secara Manual
+        names = ["Ranjid", "Ali", "Aliyantiko", "Adel", "Max", "Wanda"];
+      // console.info(names[0]);
+      {
+        // destructuring data array
+        const [firstName, middleName, lastName, ...others] = names;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(others);
+      }
+
+      {
+        // destructuring data objek
+        const person = {
+          firstName: "A",
+          lastName: "B",
+          addres: {
+            kel: "Winong",
+            kec: "Penawangan",
+            kab: "Gronogan",
+            prov: "Jateng",
+          },
+        };
+
+        let {
+          firstName,
+          lastName,
+          addres: { kel, kec, kab, prov },
+          ...others
+        } = person;
+        console.info(firstName);
+        console.info(lastName);
+        // console.info(addres);
+        console.info(kel);
+        console.info(kec);
+        console.info(kab);
+        console.info(prov);
+        console.info(others);
+      }
+
+      {
+        // descruturing objek function (parameter)
+        function displayPerson({ firstName, middleName, lastName }) {
+          console.info(firstName);
+          console.info(middleName);
+          console.info(lastName);
+        }
+
+        const person = {
+          firstName: "JEED",
+          middleName: "Ali",
+          lastName: "Aliyantiko",
+        };
+
+        displayPerson(person);
+      }
+
+      {
+        // descructuring array function (parameter)
+        function sum([first, second]) {
+          return first + second;
+        }
+
+        console.info(sum([10, 2]));
+        console.info(sum([11, 20]));
+      }
+
+      {
+        //descructuring array function (parameter) dengan default value
+        const names = ["Ranjid 21"];
+        const [firstName, middleName = "Ali 21", lastName = "Aliyantiko 21"] = names;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      {
+        //descructuring objek function (parameter) dengan default value
+        const person = {
+          firstName: "A_027",
+          lastName: "B_027",
+        };
+
+        let { firstName, middleName = "ALI_027", lastName } = person;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+      }
+
+      {
+        //descructuring objek function (parameter) dengan default value menggunakan nama lain
+        const person = {
+          firstName: "JEED_07",
+          lastName: "JEED_07",
+        };
+
+        let { firstName: namaDepan, middleName: namaTengah = "JEED_07", lastName: namaBelakang } = person;
+
+        console.info(namaDepan);
+        console.info(namaTengah);
+        console.info(namaBelakang);
+      }
+    </script>
+  </body>
+</html>

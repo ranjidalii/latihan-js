@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <script>
+      const sayHello = (name) => {
+        const say = `Hello : ${name}`;
+        console.info(say);
+      };
+
+      sayHello("RANJID");
+
+      // munulis 1 baris
+      const sayHii = (name) => console.info(`Hai : ${name}`);
+
+      sayHii("Adel");
+      sayHee("Adelia");
+
+      const sum = (first, second) => first + second;
+
+      console.info(sum(10, 22));
+
+      function giveMeName(callback) {
+        callback("Ranjid ALi");
+      }
+      // arrow function sebagai parameter
+      giveMeName((name) => console.info(`Hello : ${name}`));
+    </script>
+  </body>
+</html>

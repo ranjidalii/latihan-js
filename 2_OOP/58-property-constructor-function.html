@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Constructor Function</title>
+  </head>
+  <body>
+    <script>
+      function Person() {
+        this.firstName = "";
+        this.lastName = "";
+      }
+
+      const ranjid = new Person();
+      ranjid.firstName = "Ranjid";
+      ranjid.lastName = "Ali";
+
+      const adelia = new Person();
+      adelia.firstName = "Adelia";
+      adelia.lastName = "Rahayu";
+
+      console.log(ranjid);
+      console.log(adelia);
+    </script>
+  </body>
+</html>
